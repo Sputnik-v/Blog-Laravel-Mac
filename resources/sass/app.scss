@@ -1,0 +1,15 @@
+@import "reset";
+@import "vars";
+@import "header";
+@import "footer";
+@import "post-list.scss";
+
+body {
+    background-color: $color_site;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: $width_main;
+}

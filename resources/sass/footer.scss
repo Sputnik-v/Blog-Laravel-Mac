@@ -1,0 +1,13 @@
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: $bg_color_header;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer__text {
+    color: #e2e8f0;
+}
