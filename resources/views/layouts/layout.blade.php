@@ -13,7 +13,9 @@
     @yield('header')
 
     <div class="container">
-        @yield('main')
+        <div class="main">
+             @yield('main')
+        </div>
     </div>
 
     @yield('footer')

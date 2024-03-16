@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,23 @@ class PostController extends Controller
         $posts = Post::query()->get(['id', 'title', 'description', 'image', 'user_id', 'created_at']);
         $posts = $posts->toArray();
 
-        if($posts) {
+        $categories = Category::query()->get('category')->toArray();
 
-            return view('pages.home', compact('posts'));
+        if($categories)
+        {
+            $cat = [];
+
+            foreach ($categories as $item_category)
+            {
+                array_push($cat, $item_category['category']);
+            }
+        }
+
+
+
+        if($posts && $cat) {
+
+            return view('pages.home', compact('posts', 'cat'));
         }
     }
 

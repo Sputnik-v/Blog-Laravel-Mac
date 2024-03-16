@@ -125,6 +125,7 @@ table {
 
 .search {
   display: flex;
+  top: 0;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -232,6 +233,54 @@ table {
   padding-right: 10px;
   font-size: 14px;
   color: #1a202c;
+}
+
+.navbar {
+  position: fixed;
+  background-color: #1e454b;
+  width: 170px;
+  height: 100vh;
+  padding: 30px 0;
+}
+
+.navbar__title {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #de783c;
+  font-size: 23px;
+  text-shadow: 0 0 5px black;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.navbar__list_item {
+  width: 100%;
+}
+.navbar__list_item:hover {
+  background-color: white;
+}
+
+.navbar__list_link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.navbar__list_link:hover {
+  color: #1e454b;
+}
+
+.main {
+  position: relative;
 }
 
 body {
