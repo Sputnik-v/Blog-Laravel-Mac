@@ -33,6 +33,9 @@ class AdminController extends Controller
     }
     public function destroy($post)
     {
-        dd('destroy' . $post);
+        $post = Post::query()->findOrFail($post);
+        $post->delete();
+
+        return redirect()->route('posts.index');
     }
 }

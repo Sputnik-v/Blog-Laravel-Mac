@@ -9,7 +9,14 @@
             <p>{{$post['description']}}}</p>
         </div>
     <div>
-        <a href="">DELETE</a>
+
+        <form action="{{route('posts.destroy', [$post['id']])}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button type="submit">DELETE</button>
+        </form>
+{{--        <a href="{{route('posts.destroy', [$post['id']])}}">DELETE</a>--}}
+        <span> | </span>
         <a href="">UPDATE</a>
     </div>
         <hr>
